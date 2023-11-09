@@ -2,7 +2,7 @@ export const delay = () => {
     return new Promise((resolve) => setTimeout(resolve, 100))
 }
 
-export default async function getMovies(time, shouldError
+export default async function getProducts(time, shouldError
 ) {
     await delay(time)
     const res = await fetch(

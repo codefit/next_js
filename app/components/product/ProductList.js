@@ -1,6 +1,8 @@
 "use client"
 import Image from "next/image"
 
+
+
 const ProductList = ({ results }) => {
     return (
         <>

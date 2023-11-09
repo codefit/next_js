@@ -1,7 +1,12 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     images: {
-        domains: ['i.dummyjson.com', 'picsum.photos'],
+        remotePatterns: [
+            {
+                protocol : "https",
+                hostname : "picsum.photos"
+            }
+        ],
     },
 }
 

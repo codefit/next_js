@@ -1,11 +1,10 @@
 import Image from 'next/image'
 
-import getMovies from "@/app/util/getMovies";
-
+import getProducts from "@/app/util/getProducts";
 import ProductList from "@/app/components/product/ProductList";
 
 export default async function Home() {
-  const movies = await getMovies()
+  const data = await getProducts()
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
@@ -45,9 +44,9 @@ export default async function Home() {
         />
       </div>
 
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <div className="my-12 product-list">
-          <ProductList results={movies.products} />
+      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:text-left">
+        <div className="my-12 grid lg:grid-cols-4 md:grid-cols-3 product-list lg:gap-10 md:gap-5">
+          <ProductList results={data.products} />
         </div>
       </div>
     </main>
