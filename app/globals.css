@@ -25,3 +25,19 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+main {
+    opacity: 0;
+    animation: fadeIn ease-in 0.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
