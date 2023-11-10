@@ -3,27 +3,29 @@
 @tailwind utilities;
 
 :root {
+    /*
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+  --primary-color: #2d3b3e;
+    */
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 20,20, 31;
+    --background-end-rgb: 0, 0, 0;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
+    --background-start-rgb: 20,20, 31;
     --background-end-rgb: 0, 0, 0;
   }
 }
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background: url("/bg.jpg") rgb(var(--background-start-rgb));
+
 }
 
 @keyframes fadeIn {
@@ -35,9 +37,71 @@ body {
     }
 }
 
+header {
+    display: flex;
+}
+
+header ul {
+
+}
+
+header ul li {
+
+}
+
+header ul li a {
+    display: block;
+    padding: 15px 12px;
+}
+
 main {
     opacity: 0;
     animation: fadeIn ease-in 0.5s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
+}
+
+footer {
+
+}
+
+footer .content {
+    background: rgba(0,0,0,0.7);
+    background-size: cover;
+    background-position: bottom;
+    border-radius: 30px;
+    min-height: 35vh;
+    margin: 60px auto;
+}
+
+.brand {
+    margin-bottom: 60px;
+}
+
+
+.product-list {
+    display: grid;
+    margin: 0 auto;
+    grid-auto-flow: dense;
+    grid-auto-rows: 320px auto;
+    gap: 15px;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%,200px),1fr));
+}
+
+.product-list .item {
+    display: grid;
+    gap: 1rem;
+    grid-template-rows: subgrid;
+    grid-row: span 2;
+}
+
+.product-list .item .image {
+    border:30px solid rgba(99,27,137,0.7);
+    border-radius: 30px;
+    background: transparent;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+.product-list .item .image img {
+    overflow: hidden;
+    border-radius: 30px;
 }

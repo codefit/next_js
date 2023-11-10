@@ -1,10 +1,13 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+    env : {
+        source: 'https://fakestoreapi.com'
+    },
     images: {
         remotePatterns: [
             {
                 protocol : "https",
-                hostname : "picsum.photos"
+                hostname : "fakestoreapi.com"
             }
         ],
     },
