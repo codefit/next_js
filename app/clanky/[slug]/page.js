@@ -22,4 +22,3 @@ export default async function Page({ params }) {
         <Image src={product.image} alt={product.title} width={600} height={0} />
     </>
 }
-export default Page
