@@ -11,7 +11,7 @@ export default async function Home() {
     <>
       <div className="relative brand flex place-items-center ">
               <Image
-                  className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
+                  className="relative"
                   src="/logo.svg"
                   alt="Logo.js Logo"
                   width={350}
