@@ -3,9 +3,11 @@ import Link from 'next/link'
 
 import getProducts from "@/app/util/getProducts";
 import ProductList from "@/app/components/product/ProductList";
+import getArticles from "@/app/util/getArticles";
+import ArticleList from "@/app/components/article/ArticleList";
 
 export default async function Home() {
-  const data = await getProducts()
+  const products = await getProducts();
 
   return (
     <>
@@ -20,9 +22,12 @@ export default async function Home() {
               />
       </div>
 
-        <div className="product-list">
-            <ProductList results={data} />
-        </div>
+
+      <div className="container">
+          <div className="product-list">
+              <ProductList results={products} />
+          </div>
+      </div>
     </>
   )
 }

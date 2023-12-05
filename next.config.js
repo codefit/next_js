@@ -1,8 +1,10 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     env : {
-        source: 'https://fakestoreapi.com'
+        source: 'https://fakestoreapi.com',
+        ga4: 'G-12312312'
     },
+
     images: {
         remotePatterns: [
             {

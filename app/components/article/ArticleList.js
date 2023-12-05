@@ -1,33 +1,25 @@
 "use client"
 import Image from "next/image"
 
+const ArticleList = (test) => {
 
-const ProductList = ({ results }) => {
     return (
         <>
-            {results.map((product) => (
-
-                <div
-                    className="item "
-                    key={product.id}
-                >
+            {test.map((article) => (
+                <div key={article.id}>
                     <div className="image">
                         <Image
                             src="/laravel.jpg"
                             width={350}
                             height={0}
                             className="w-full  h-auto rounded-2xl"
-                            alt={product.title}
+                            alt={article.title}
                         />
+                        <h2>${article.title}</h2>
                     </div>
-                    <h2 className="text-lg font-bold py-6">
-                        <a href={`kurzy/${product.id}`}>{product.title}</a>
-                    </h2>
-
                 </div>
             ))}
         </>
     )
 }
-
-export default ProductList
+export default ArticleList

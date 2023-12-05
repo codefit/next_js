@@ -7,6 +7,7 @@ import NavBar from "@/app/components/header/NavBar";
 import Footer from "@/app/components/footer/Footer";
 
 import GoogleAnalytics from "@/app/components/analytics/GoogleAnalytics";
+import Tools from "@/app/components/tools";
 
 // rafce
 
@@ -25,7 +26,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="cs">
-        <GoogleAnalytics></GoogleAnalytics>
+        <Tools></Tools>
+
       <body className={inter.className} >
         <NavBar />
         <main className="flex min-h-screen flex-col items-center justify-between p-24">

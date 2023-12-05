@@ -24,7 +24,7 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: url("/bg.jpg") rgb(var(--background-start-rgb));
+  background: #222327;
 
 }
 
@@ -80,28 +80,35 @@ footer .content {
 
 
 .product-list {
-    display: grid;
-    margin: 0 auto;
-    grid-auto-flow: dense;
-    grid-auto-rows: 320px auto;
-    gap: 15px;
-    grid-template-columns: repeat(auto-fit, minmax(min(100%,200px),1fr));
+    display: flex;
+    flex-wrap: wrap;
+    margin:-30px;
+
 }
 
 .product-list .item {
-    display: grid;
-    gap: 1rem;
-    grid-template-rows: subgrid;
-    grid-row: span 2;
+    flex:1 0 25%;
+    padding: 15px;
+}
+
+.product-list .item:first-of-type {
+    flex:1 0 50%;
+}
+
+.product-list .item:nth-last-of-type(4){
+    flex: 1 0 50%;
+}
+
+.product-list .item:last-of-type {
+
 }
 
 .product-list .item .image {
-    border:30px solid rgba(99,27,137,0.7);
-    border-radius: 30px;
     background: transparent;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+
 }
 .product-list .item .image img {
     overflow: hidden;
     border-radius: 30px;
+    object-position: center;
 }
